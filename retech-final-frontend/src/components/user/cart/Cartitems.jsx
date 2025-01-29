@@ -96,7 +96,7 @@ const CartItems = ({cartItem}) => {
     
     const fetchCart = async () => {
       try {
-        const response = await axios.post('http://localhost:5000/cart/remove-item', { productId: productId, cartId: cartId});
+        const response = await axios.post('http://localhost:5000/cart/delete-item', { productId: productId, cartId: cartId });
         // Extract only the _id from each product in the productsInCart array
         const productIds = response.data.cart.productsInCart;
         console.log(productIds);
